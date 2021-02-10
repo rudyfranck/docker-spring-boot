@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  docker-compose-container:
+    image: rudy-spring-boot-docker-compose:1
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - /data/docker-compose-container
+    ports:
+      - "8095:8095"
